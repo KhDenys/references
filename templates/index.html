@@ -1,0 +1,199 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <div class="container">
+    <div class="block">
+      <div class="authors">
+        <div class="row">
+          <h3>Автори</h3>
+        </div>
+        <div class="form-row">
+          <div class="col-4">
+            <label for="authors-last-name-0">Прізвище</label>
+            <input id="authors-last-name-0" class="form-control" type="text">
+          </div>
+          <div class="col-4">
+            <label for="authors-first-name-0">Ім'я</label>
+            <input id="authors-first-name-0" class="form-control" type="text">
+          </div>
+          <div class="col-4">
+            <label for="authors-surname-0">По батькові</label>
+            <input id="authors-surname-0" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button id="add-author-button" class="btn btn-light add-btn" type="button">+ Add
+          another author</button>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="editors">
+        <div class="row">
+          <h3>Редактори (опціонально)</h3>
+        </div>
+        <div class="form-row">
+          <div class="col-4">
+            <label for="editors-last-name-0">Прізвище</label>
+            <input id="editors-last-name-0" class="form-control" type="text">
+          </div>
+          <div class="col-4">
+            <label for="editors-first-name-0">Ім'я</label>
+            <input id="editors-first-name-0" class="form-control" type="text">
+          </div>
+          <div class="col-4">
+            <label for="editors-surname-0">По батькові</label>
+            <input id="editors-surname-0" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button id="add-editor-button" class="btn btn-light add-btn" type="button">+ Add another
+          editor</button>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="interpreters">
+        <div class="row">
+          <h3>Перекладач (опціонально)</h3>
+        </div>
+        <div class="form-row">
+          <div class="col-4">
+            <label for="interpreters-last-name-0">Прізвище</label>
+            <input id="interpreters-last-name-0" class="form-control" type="text">
+          </div>
+          <div class="col-4">
+            <label for="interpreters-first-name-0">Ім'я</label>
+            <input id="interpreters-first-name-0" class="form-control" type="text">
+          </div>
+          <div class="col-4">
+            <label for="interpreters-surname-0">По батькові</label>
+            <input id="interpreters-surname-0" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button id="add-interpreter-button" class="btn btn-light add-btn" type="button">+
+          Add another
+          interpreter</button>
+      </div>
+      <div class="form-group row">
+          <label class="col-5 col-form-label" for="language">Переклад з (введіть скорочену назву мови):</label>
+          <div class="col-7">
+            <input id="language" class="form-control" type="text" placeholder="англ., фр., іт. тощо">
+          </div>
+        </div>
+    </div>
+
+    <div class="block">
+      <div class="book">
+        <div class="row">
+          <h3>Книга</h3>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label" for="book-name">Назва книги:</label>
+          <div class="col-8">
+            <input id="book-name" class="form-control" type="text">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-2 col-form-label" for="book-type">Тип книги:</label>
+          <div class="col-8">
+            <input id="book-type" class="form-control" type="text" placeholder="навч. посібн., підр., монографія тощо">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-2 col-form-label" for="edition-number">Номер видання:</label>
+          <div class="col-8">
+            <input id="edition-number" class="form-control number" type="number">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-2 col-form-label" for="additional-inform">Додаткова інформація:</label>
+          <div class="col-8">
+            <input id="additional-inform" class="form-control" type="text" placeholder="доповн., переробл. тощо">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-2 col-form-label" for="edition-city">Місто видання:</label>
+          <div class="col-8">
+            <input id="edition-city" class="form-control" type="text">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-2 col-form-label" for="edition-house">Видавництво:</label>
+          <div class="col-8">
+            <input id="edition-house" class="form-control" type="text">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-2 col-form-label" for="edition-year">Рік видання:</label>
+          <div class="col-8">
+            <input id="edition-year" class="form-control number" type="number">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-2 col-form-label" for="number-pages">Кількість сторінок:</label>
+          <div class="col-8">
+            <input id="number-pages" class="form-control number" type="number">
+          </div>
+        </div>
+        <button id="add-book" type="button" class="btn btn-primary">Додати</button>
+      </div>
+    </div>
+
+      <div class="block">
+        <div class="row">
+          <h3>Скачати актуальний список літератури</h3>
+        </div>
+        <div class="form-row">
+          <div class="col-4">
+            <form method="get" action="http://127.0.0.1:8000/docx">
+              <button type="submit" class="btn btn-primary">Скачати</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add your site or application content here -->
+  <script src="{% static 'modernizr-3.7.1.min.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="{% static 'bootstrap.js' %}"></script>
+  <script src="{% static 'main.js' %}"></script>
+
+</body>
+
+</html>
