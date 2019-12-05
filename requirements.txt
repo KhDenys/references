@@ -1,4 +1,4 @@
-Django==2.2.6
+Django==2.2.8
 djangorestframework==3.10.3
 lxml==4.4.1
 python-docx==0.8.10
